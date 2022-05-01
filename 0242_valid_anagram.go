@@ -6,12 +6,13 @@ package main
 
 import "sort"
 
+// time: O(n), space: O(1)
 func isAnagram(s string, t string) bool {
 	if len(s) != len(t) {
 		return false
 	}
 
-	// s & and consist only of lowercase English letters (26 total)
+	// s & t consist only of lowercase English letters (26 total)
 	arr := make([]int, 26)
 	for i := range s {
 		arr[s[i]-'a']++
@@ -27,6 +28,7 @@ func isAnagram(s string, t string) bool {
 	return true
 }
 
+// time: O(nlogn+n), space: O(n)
 func isAnagram_sort(s string, t string) bool {
 	if len(s) != len(t) {
 		return false

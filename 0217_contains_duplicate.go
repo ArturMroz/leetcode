@@ -4,12 +4,12 @@
 
 package main
 
+// time: O(n), space: O(n)
 func containsDuplicate(nums []int) bool {
 	unique := map[int]struct{}{}
-	dummy := struct{}{}
 
 	for _, v := range nums {
-		unique[v] = dummy
+		unique[v] = struct{}{}
 	}
 
 	return len(unique) != len(nums)
