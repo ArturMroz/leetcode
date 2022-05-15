@@ -15,6 +15,7 @@
 
 package main
 
+// time O(n), space avg O(log n), space worst O(n)
 func isSameTree(p *TreeNode, q *TreeNode) bool {
 	if p == nil && q == nil {
 		return true
